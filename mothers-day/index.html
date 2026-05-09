@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Mother's Day</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Canvases -->
+<canvas id="stars-canvas"></canvas>
+<canvas id="fw-canvas"></canvas>
+
+<!-- Petals (injected by JS) -->
+
+<!-- Main content -->
+<main class="page">
+
+  <!-- Hero title -->
+  <div class="hero">
+    <p class="subtitle">✦ A Message from the Heart ✦</p>
+    <h1>Happy<br>Mother's Day</h1>
+    <div class="title-deco">
+      <div class="line"></div>
+      <span>🌸</span>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <!-- Envelope -->
+  <div class="envelope-section">
+    <p class="hint">✉ Tap the envelope to open your letter ✉</p>
+    <div class="envelope-wrap" id="envelope" title="Click to open your letter">
+      <svg class="env-svg" viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
+        <!-- Body -->
+        <rect class="env-body" x="10" y="80" width="340" height="175" rx="8" fill="#f4a7b9" filter="url(#shadow)"/>
+        <!-- Bottom triangle fold lines -->
+        <polygon points="10,255 180,155 350,255" fill="#e8728a"/>
+        <!-- Side folds -->
+        <polygon points="10,80 10,255 180,155"  fill="#f7bfcc"/>
+        <polygon points="350,80 350,255 180,155" fill="#f0919f"/>
+        <!-- Flap -->
+        <polygon class="env-flap" points="10,80 180,185 350,80" fill="#e8728a"/>
+        <!-- Heart seal -->
+        <text x="180" y="245" text-anchor="middle" font-size="22" fill="#c2185b">♥</text>
+        <!-- Letter peek -->
+        <rect class="letter" x="90" y="60" width="180" height="115" rx="3" fill="white" opacity="0"/>
+        <defs>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+            <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#c2185b" flood-opacity=".3"/>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Message card -->
+  <div class="message-card">
+    <h2>"To the woman who gave me everything "</h2>
+    <p>
+ Mom, I don’t really have the perfect words to describe how much you mean to me. You’re the comfort in my mornings, the peace when everything feels chaotic, and the reason I understand what real love feels like.
+
+You didn’t just build a home with walls you built it with your sacrifices, your patience, your laughter, and the way you always care for us no matter what. Every hug from you feels like the safest place in the world, like nothing can go wrong.
+
+I’m really grateful for you, not just today but every single day. I love you more than I can explain, more than any poem or message could ever fully express. Thank you for always being my home.
+
+    </p>
+    <div class="hearts-row">
+      <span style="--d:1.8s">💗</span>
+      <span style="--d:2.1s">🌸</span>
+      <span style="--d:1.6s">💕</span>
+      <span style="--d:2.4s">🌷</span>
+      <span style="--d:1.9s">💗</span>
+    </div>
+  </div>
+
+</main>
+
+<!-- Letter modal -->
+<div class="letter-modal" id="letterModal">
+  <div class="letter-paper">
+    <button class="close-btn" id="closeModal" aria-label="Close">✕</button>
+    <span class="letter-icon">💌</span>
+    <h2 class="letter-title">My Dearest Mom,</h2>
+    <div class="letter-divider"></div>
+    <p class="letter-body">
+      On this special day, I want you to know that every good thing in me
+      is a reflection of you. You showed me strength when life was hard,
+      gentleness when I was broken, and courage when I was afraid.
+      <br><br>
+      You never asked for anything in return  not a thank you, not a crown,
+      not even a moment of rest. You just gave, quietly and endlessly,
+      like a river that never runs dry.
+      <br><br>
+      I carry you in every kind thing I do, in every breath I take with love.
+      Being your child is the greatest gift I have ever been given.
+      <br><br>
+      Happy Mother's Day, Mama. You deserve the whole world.
+    </p>
+    <p class="letter-sig">With all my love, always 💕</p>
+  </div>
+</div>
+
+<script src="script.js">
+
+  
+</script>
+</body>
+</html>
