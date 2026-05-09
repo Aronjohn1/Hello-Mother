@@ -331,3 +331,130 @@
     0%  { opacity: 1; transform: translateY(0) scale(1); }
     100%{ opacity: 0; transform: translateY(-180px) scale(.4); }
   }
+
+  /* ── RESPONSIVE: TABLET ── */
+  @media (max-width: 768px) {
+    .page {
+      padding: 40px 16px 80px;
+      justify-content: flex-start;
+      padding-top: 50px;
+    }
+
+    .hero { margin-bottom: 40px; }
+
+    .subtitle {
+      font-size: .78rem;
+      letter-spacing: .2em;
+    }
+
+    h1 { font-size: clamp(2.6rem, 14vw, 4.5rem); }
+
+    .title-deco span { font-size: 1.3rem; }
+    .title-deco .line { max-width: 70px; }
+
+    .envelope-section {
+      margin-bottom: 44px;
+      gap: 14px;
+    }
+
+    .hint { font-size: .9rem; text-align: center; padding: 0 10px; }
+
+    .env-svg { width: clamp(200px, 72vw, 300px); }
+
+    .message-card {
+      width: 96%;
+      padding: 36px 24px;
+    }
+
+    .message-card h2 { font-size: clamp(1.15rem, 4.5vw, 1.5rem); margin-bottom: 16px; }
+    .message-card p  { font-size: clamp(.95rem, 3.5vw, 1.05rem); line-height: 1.85; }
+
+    .hearts-row { margin-top: 20px; font-size: 1.1rem; gap: 8px; }
+
+    .letter-paper {
+      width: 94%;
+      padding: 44px 24px 36px;
+    }
+
+    .letter-title { font-size: clamp(1.5rem, 6vw, 2rem); }
+    .letter-body  { font-size: clamp(.95rem, 3.5vw, 1.05rem); line-height: 1.75; }
+    .letter-sig   { font-size: 1.25rem; margin-top: 20px; }
+    .letter-icon  { font-size: 2.2rem; }
+  }
+
+  /* ── RESPONSIVE: PHONE ── */
+  @media (max-width: 480px) {
+    .page { padding: 36px 12px 70px; padding-top: 42px; }
+
+    .hero { margin-bottom: 30px; }
+
+    .subtitle {
+      font-size: .72rem;
+      letter-spacing: .15em;
+    }
+
+    h1 { font-size: clamp(2.2rem, 16vw, 3.4rem); line-height: 1.05; }
+
+    .title-deco { gap: 10px; margin-top: 12px; }
+    .title-deco span { font-size: 1.1rem; }
+    .title-deco .line { max-width: 48px; }
+
+    .envelope-section { margin-bottom: 32px; gap: 12px; }
+
+    .hint {
+      font-size: .82rem;
+      letter-spacing: 0;
+      padding: 0 8px;
+    }
+
+    .env-svg { width: clamp(180px, 80vw, 260px); }
+
+    .message-card {
+      width: 98%;
+      padding: 28px 18px;
+    }
+
+    .message-card h2 {
+      font-size: clamp(1rem, 5vw, 1.25rem);
+      margin-bottom: 12px;
+    }
+
+    .message-card p {
+      font-size: clamp(.88rem, 4vw, 1rem);
+      line-height: 1.8;
+    }
+
+    .hearts-row { font-size: 1rem; gap: 6px; margin-top: 16px; }
+
+    /* Letter modal full-screen on small phones */
+    .letter-modal { align-items: flex-end; }
+
+    .letter-paper {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 18px 18px 0 0;
+      padding: 40px 20px 32px;
+      max-height: 88vh;
+      overflow-y: auto;
+    }
+
+    .letter-paper::before { border-radius: 18px 18px 0 0; }
+
+    .letter-title { font-size: clamp(1.3rem, 7vw, 1.7rem); }
+
+    .letter-body {
+      font-size: clamp(.88rem, 4vw, 1rem);
+      line-height: 1.7;
+    }
+
+    .letter-sig   { font-size: 1.1rem; }
+    .letter-icon  { font-size: 2rem; margin-bottom: 8px; }
+
+    .letter-paper .close-btn {
+      top: 12px; right: 14px;
+      font-size: 1.2rem;
+    }
+
+    /* Reduce balloon count feel on mobile via smaller sizes handled in JS */
+    .balloon svg { filter: drop-shadow(0 4px 10px rgba(0,0,0,.3)); }
+  }
